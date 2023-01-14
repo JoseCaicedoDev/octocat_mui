@@ -1,8 +1,9 @@
-import { Container } from "@mui/material"
+import { Container, Typography } from "@mui/material"
 import { Search } from "./components/Search"
 import { useState, useEffect } from "react"
 import { getUser } from "./services/users"
 import { UserCard } from "./containers/userCard"
+import { Padding } from "@mui/icons-material"
 function App() {
 
   const [inputUser, setInputUser] = useState('octocat')
@@ -34,8 +35,11 @@ function App() {
       marginTop: '40px',
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center'
+      alignItems: 'center',
+      paddingTop: '20px',
     }}>
+      <Typography variant="h4" color="initial" fontWeight={700}>
+        Search Github profiles</Typography>
       <Search setInputUser={setInputUser} />
       <UserCard user={user} />
     </Container>

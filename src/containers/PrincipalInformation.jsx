@@ -8,11 +8,10 @@ export const PrincipalInformation = ({ user }) => {
   return (
     <>
       <Stack>
-        <Typography>{name}</Typography>
-        <Typography>{created_at}</Typography>
+        <Typography variant="h5" paddingY={1}>{name} hola</Typography>
+        <Typography variant="subtitle1">{created_at} number</Typography>
       </Stack>
-      <Typography>{login}</Typography>
-
+      <Typography variant="body2">{login} user</Typography>
     </>
   )
 }

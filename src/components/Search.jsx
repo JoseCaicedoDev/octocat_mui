@@ -15,13 +15,14 @@ export const Search = ({ setInputUser }) => {
   return (
     <Stack direction='row' sx={{ marginTop: '30px', width: '80%' }}>
       <TextField id="outlined-basic"
-        label='Search'
-        placeholder="jcaicedo"
+        label='Search profile'
+        placeholder="Octocat"
         variant="outlined"
         size="small"
         value={valueInput}
         onChange={onSearchValue}
-        sx={{ width: '90%' }} />
+        fullWidth
+      />
       <IconButton size="small"
         onClick={handleSubmit}
         sx={{ left: "-45px" }}>
