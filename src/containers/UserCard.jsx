@@ -8,7 +8,7 @@ export const UserCard = ({ user }) => {
 
   return (
     <Grid container spacing={2} justifyContent='center' marginTop={1}>
-      <Grid item xs={3}>
+      <Grid item xs={8} sm={3}>
         <Stack justifyContent='center' direction='column' alignItems='center' >
           <CardMedia
             component='img'
@@ -18,7 +18,7 @@ export const UserCard = ({ user }) => {
           <BioCard user={user} />
         </Stack>
       </Grid>
-      <Grid item xs={7}>
+      <Grid item xs={11} sm={7}>
         <PrincipalInformation user={user}></PrincipalInformation>
       </Grid>
     </Grid>

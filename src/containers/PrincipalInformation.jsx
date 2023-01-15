@@ -11,7 +11,7 @@ export const PrincipalInformation = ({ user }) => {
         <Typography variant="h5" paddingY={1}>{name}</Typography>
       </Stack>
       <Typography variant="caption">{`@${login}`}</Typography>
-      <Typography variant="body2">{bio}</Typography>
+      <Typography variant="body2" marginTop={2}>{bio}</Typography>
     </>
   )
 }

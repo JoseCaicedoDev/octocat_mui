@@ -1,9 +1,8 @@
-import { Container, Typography } from "@mui/material"
+import { Card, Container, Typography } from "@mui/material"
 import { Search } from "./components/Search"
 import { useState, useEffect } from "react"
 import { getUser } from "./services/users"
 import { UserCard } from "./containers/userCard"
-import { Padding } from "@mui/icons-material"
 function App() {
 
   const [inputUser, setInputUser] = useState('octocat')
@@ -28,20 +27,29 @@ function App() {
   console.log(user, "state")
   return (
     <Container sx={{
-      background: "whitesmoke",
-      width: '80vw',
-      height: '500px',
-      borderRadius: '16px',
-      marginTop: '40px',
       display: 'flex',
-      flexDirection: 'column',
+      justifyContent: 'center',
       alignItems: 'center',
-      paddingTop: '20px',
+      height: '100vh',
+      width: '100%',
+      bgcolor: '#22272e',
+      margin: 0
     }}>
-      <Typography variant="h4" color="initial" fontWeight={700}>
-        Search Github profiles</Typography>
-      <Search setInputUser={setInputUser} />
-      <UserCard user={user} />
+      <Card sx={{
+        background: "whitesmoke",
+        width: '70vw',
+        borderRadius: '16px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '30px 20px',
+      }}>
+        <Typography variant="h5" color="#22272e" fontWeight={700}>
+          Search Github profiles</Typography>
+        <Search setInputUser={setInputUser} />
+        <UserCard user={user} />
+      </Card>
+
     </Container>
   )
 }

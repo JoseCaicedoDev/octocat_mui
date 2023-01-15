@@ -8,7 +8,7 @@ export const BioCard = ({ user }) => {
   } = user
   return (
     <>
-      <Stack direction='row' spacing={2}>
+      <Stack direction='row' spacing={2} marginTop={2}>
         <Stack direction='row' spacing={1} alignItems="center">
           <Diversity3Icon />
           <Typography variant="body2">{followers}</Typography>
