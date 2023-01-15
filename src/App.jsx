@@ -32,12 +32,12 @@ function App() {
       alignItems: 'center',
       height: '100vh',
       width: '100%',
-      bgcolor: '#22272e',
-      margin: 0
+      margin: '0 auto'
     }}>
       <Card sx={{
         background: "whitesmoke",
-        width: '70vw',
+        width: '100%',
+        maxWidth: '768px',
         borderRadius: '16px',
         display: 'flex',
         flexDirection: 'column',

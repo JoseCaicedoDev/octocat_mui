@@ -13,7 +13,7 @@ export const Search = ({ setInputUser }) => {
     setInputUser(valueInput)
   }
   return (
-    <Stack direction='row' sx={{ marginTop: '30px', width: '80%' }}>
+    <Stack direction='row' sx={{ marginTop: '30px', width: '100%', maxWidth: "600px" }}>
       <TextField id="outlined-basic"
         label='Search profile'
         placeholder="Octocat"
