@@ -3,15 +3,15 @@ export const PrincipalInformation = ({ user }) => {
   const {
     name,
     login,
-    created_at
+    bio
   } = user
   return (
     <>
       <Stack>
-        <Typography variant="h5" paddingY={1}>{name} hola</Typography>
-        <Typography variant="subtitle1">{created_at} number</Typography>
+        <Typography variant="h5" paddingY={1}>{name}</Typography>
       </Stack>
-      <Typography variant="body2">{login} user</Typography>
+      <Typography variant="caption">{`@${login}`}</Typography>
+      <Typography variant="body2">{bio}</Typography>
     </>
   )
 }
