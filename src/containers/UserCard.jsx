@@ -14,7 +14,13 @@ export const UserCard = ({ user }) => {
             component='img'
             alt='GitHub'
             image={avatar_url}
-            sx={{ borderRadius: "50%" }} />
+            sx={{
+              borderRadius: "50%", width: {
+                xs: '60%',
+                sm: '100%'
+              },
+              minWidth: '150px'
+            }} />
           <BioCard user={user} />
         </Stack>
       </Grid>

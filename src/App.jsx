@@ -44,7 +44,12 @@ function App() {
         alignItems: 'center',
         padding: '30px 20px',
       }}>
-        <Typography variant="h5" color="#22272e" fontWeight={700}>
+        <Typography variant="h5" color="#22272e" fontWeight={700} sx={{
+          fontSize: {
+            xs: '16px',
+            md: '24px'
+          }
+        }}>
           Search Github profiles</Typography>
         <Search setInputUser={setInputUser} />
         <UserCard user={user} />
