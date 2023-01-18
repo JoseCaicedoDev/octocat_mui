@@ -3,6 +3,7 @@ import { Search } from "./components/Search"
 import { useState, useEffect } from "react"
 import { getUser } from "./services/users"
 import { UserCard } from "./containers/userCard"
+import { Carrusel } from "./components/Carrusel"
 function App() {
 
   const [inputUser, setInputUser] = useState('octocat')
@@ -24,10 +25,34 @@ function App() {
 
     fetchUser();
   }, [inputUser]);
-  console.log(user, "state")
+
+  const dataCarrusel = [
+    {
+      img: 'https://images.pexels.com/photos/858115/pexels-photo-858115.jpeg',
+      title: 'CEO of Pispirispas Company',
+      description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis eu sit massa volutpat massa rhoncus odio feugiat tellus, elit massa sed.',
+      name: 'John Carter',
+      location: 'San Francisco, CA'
+    },
+    {
+      img: 'https://images.pexels.com/photos/858115/pexels-photo-858115.jpeg',
+      title: 'Pispirispas Company',
+      description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis eu sit massa volutpat massa rhoncus odio feugiat tellus, elit massa sed.',
+      name: 'John Carter',
+      location: 'San Francisco, CA'
+    },
+    {
+      img: 'https://images.pexels.com/photos/858115/pexels-photo-858115.jpeg',
+      title: 'CEO ',
+      description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis eu sit massa volutpat massa rhoncus odio feugiat tellus, elit massa sed.',
+      name: 'John Carter',
+      location: 'San Francisco, CA'
+    },
+  ]
   return (
     <Container sx={{
       display: 'flex',
+      flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
       height: '100vh',
@@ -54,8 +79,9 @@ function App() {
         <Search setInputUser={setInputUser} />
         <UserCard user={user} />
       </Card>
+      <Carrusel />
 
-    </Container>
+    </Container >
   )
 }
 
